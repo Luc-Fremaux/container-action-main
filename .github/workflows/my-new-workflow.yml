@@ -17,12 +17,20 @@ jobs:
       - name: Example
         run: |
           echo "Mon exemple"
-          echo "Env Name: ${{ github.event.inputs.Environment }}"
+          echo "Env Name: ${{ github.event.inputs.Environnement }}"
       - name: Github variable
-        run: echo '${{ toJSON(github)}}'
+        run: |
+          echo 'Affichage des variables Github :'
+          echo '${{ toJSON(github) }}' | jq .
       - name: Runner Variable
-        run: echo '${{ toJSON(runner)}}'
+        run: |
+          echo 'Affichage des variables Runner :'
+          echo '${{ toJSON(runner) }}' | jq .
       - name: Secrets variable
-        run: echo '${{ toJSON(secrets)}}'
-      - name: Secrets variable
-        run: echo '${{ toJSON(vars.MY_API_URL)}}'
+        run: |
+          echo 'Affichage des secrets :'
+          echo '${{ toJSON(secrets) }}'
+      - name: Custom Variable (MY_API_URL)
+        run: |
+          echo 'Affichage de la variable MY_API_URL :'
+          echo '${{ vars.MY_API_URL }}'
