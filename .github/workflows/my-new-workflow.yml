@@ -25,4 +25,4 @@ jobs:
       - name: Secrets variable
         run: echo '${{ toJSON(secrets)}}'
       - name: Secrets variable
-        run: echo '${{ toJSON(env.MY_API_URL)}}'
+        run: echo '${{ toJSON(vars.MY_API_URL)}}'
