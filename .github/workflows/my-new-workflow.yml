@@ -2,7 +2,7 @@ name: Test Manual Workflow
 
 on:
   workflow_dispatch:
-    input:
+    inputs:
       Environnement:
         description: 'The environment i need to deploy on'
         required: true
