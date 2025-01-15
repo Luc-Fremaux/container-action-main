@@ -12,7 +12,7 @@ inputs:
 # Define your outputs here.
 outputs:
   greeting:
-    description: 'Your output description here'
+    description: 'Description test'
 
 runs:
   using: docker
